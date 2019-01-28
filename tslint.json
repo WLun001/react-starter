@@ -3,8 +3,10 @@
   "extends": [
     "tslint-react"
   ],
-  "jsRules": {},
+  "jsRules": {
+  },
   "rules": {
+    "jsx-wrap-multiline": true,
     "quotemark": [
       true,
       "jsx-double",

@@ -4,7 +4,12 @@ interface DateTime {
   date: Date
 }
 
-class Clock extends Component<DateTime, DateTime> {
+interface Props {
+  date: Date;
+  toggle: boolean;
+}
+
+class Clock extends Component<Props, DateTime> {
 
   timer: NodeJS.Timeout;
 
@@ -37,5 +42,4 @@ class Clock extends Component<DateTime, DateTime> {
   }
 }
 
-// todo: stop here https://reactjs.org/docs/state-and-lifecycle.html#using-state-correctly
 export default Clock;

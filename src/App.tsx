@@ -2,13 +2,22 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Clock from './Clock';
+import Toggle from './Toggle';
+import LoginControl from './LoginControl';
+import {Mailbox} from './Mailbox';
+import {NumberList} from './List';
 
 class App extends Component {
+  message = [1, 2, 3, 4];
   render() {
     return (
         <div className="App">
-          <Clock date={new Date()}/>
+          <Toggle />
+          <Clock toggle={true} date={new Date()}/>
+          <LoginControl />
           <header className="App-header">
+            <Mailbox unreadMessage={this.message} />
+            <NumberList numbers={this.message} />
             <img src={logo} className="App-logo" alt="logo"/>
             <p>
               Edit <code>src/App.tsx</code> and save to reload.
@@ -26,5 +35,5 @@ class App extends Component {
     );
   }
 }
-
+// todo: stop here https://reactjs.org/docs/forms.html
 export default App;
