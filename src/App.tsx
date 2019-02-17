@@ -6,6 +6,7 @@ import Toggle from './Toggle';
 import LoginControl from './LoginControl';
 import {Mailbox} from './Mailbox';
 import {NumberList} from './List';
+import Calculator from './Calculator';
 
 class App extends Component {
   message = [1, 2, 3, 4];
@@ -30,10 +31,12 @@ class App extends Component {
             >
               Learn React
             </a>
+            <Calculator/>
           </header>
         </div>
     );
   }
 }
-// todo: stop here https://reactjs.org/docs/forms.html
+
+// todo: stop here https://reactjs.org/docs/lifting-state-up.html#adding-a-second-input
 export default App;
