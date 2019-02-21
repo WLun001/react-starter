@@ -38,5 +38,5 @@ class App extends Component {
   }
 }
 
-// todo: stop here https://reactjs.org/docs/lifting-state-up.html#adding-a-second-input
+// todo: next start here: https://reactjs.org/docs/composition-vs-inheritance.html
 export default App;

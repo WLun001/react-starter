@@ -6,23 +6,18 @@ const scaleNames: { [key: string]: string } = {
   f: 'Fahrenheit'
 };
 
-export interface Scale {
-  scale: string;
-}
-
-class TemperatureInput extends Component<Scale, CalculatorModel> {
-  constructor(props: Scale) {
+class TemperatureInput extends Component<CalculatorModel, CalculatorModel> {
+  constructor(props: CalculatorModel) {
     super(props);
-    this.state = {temperature: ''};
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e: any) {
-    this.setState({temperature: e.target.value})
+    this.props.onTemperatureChange(e.target.value);
   }
 
   render() {
-    const temperature = this.state.temperature;
+    const temperature = this.props.temperature;
     const scale = this.props.scale;
     return (
         <fieldset>
